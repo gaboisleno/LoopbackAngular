@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  server:
+    build: .
+    env_file: .env
+    links:
+      - db
+    command: npm run watch
+    volumes:
+      - .:/usr/src/app
+    ports:
+      - "3000-3004:3000-3004"
+  
+  db:
+    image: postgres:9.5
+    env_file: .env
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  db-data:
+    driver: local

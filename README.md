@@ -2,25 +2,30 @@
 
 ####Steps
 In root project folder ./
+
 `$ npm install`
 
 In client-scr project folder ./client-src
+
 `$ npm install`
 
 Run docker
-	`$ docker-compose up`
+
+`$ docker-compose up`
 
 Run angular
-	`$ npm start`
+
+`$ npm start`
 
 
-Create a .env File in project root ./
-	# Server / worker
+Create a .env File in project root
+```
+	#Server
 	DB_DATABASE=example
 	DB_USERNAME=postgres
 	DB_PASSWORD=postgres
 	DB_HOST=db
-
+	
 	#DataBase
 	POSTGRES_USER=postgres
 	POSTGRES_DB=example
@@ -28,6 +33,6 @@ Create a .env File in project root ./
 
 	NODE_PATH=/usr/src/app/lib
 	PUBLIC_URL=http://localhost:3000
-
+```
 
 ###End

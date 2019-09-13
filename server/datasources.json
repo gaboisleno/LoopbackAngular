@@ -1,9 +1,9 @@
 {
   "db": {
-    "host": "db",
-    "database": "example",
-    "username": "postgres",
-    "password": "postgres",
+    "host": "${DB_HOST}",
+    "database": "${POSTGRES_DB}",
+    "username": "${POSTGRES_USER}",
+    "password": "${POSTGRES_PASSWORD}",
     "name": "db",
     "connector": "postgresql"
   }

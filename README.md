@@ -37,9 +37,9 @@ Create a .env File in project root
 
 
 Run migrations
-
 `$ docker-compose exec server bash`
 
 `$ npm run migrate up`
 
+Docs:https://db-migrate.readthedocs.io/en/latest/
 ###End

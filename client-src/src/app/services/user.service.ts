@@ -13,7 +13,7 @@ export class UserService {
 	private userApi: UserApi) { }
 
   	login(user, password){
-		  return this.userApi.login({user:user, password: password});
+		  return this.userApi.login({username:user, password: password});
   	}
 	  
 	  test() {

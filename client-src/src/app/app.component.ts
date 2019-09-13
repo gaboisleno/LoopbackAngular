@@ -8,16 +8,5 @@ import { Component } from '@angular/core';
 
 export class AppComponent {
   title = 'client-src';
-  username: string;
-  password: string;
-
-  clicked(){
-  	console.log(this.username +" "+this.password);
-  }
-
-  login(){
-  	
-  }
-
 
 }

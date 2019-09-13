@@ -9,8 +9,7 @@ import { MaterialModule } from './material.module';
 
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'
-
-
+import { SDKBrowserModule } from './shared/sdk/index';
 
 @NgModule({
   imports: [
@@ -19,7 +18,8 @@ import { RegisterComponent } from './register/register.component'
   	BrowserAnimationsModule,
     HttpClientModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    SDKBrowserModule.forRoot()
   ],
   declarations: [
     AppComponent,

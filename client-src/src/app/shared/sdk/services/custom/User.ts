@@ -30,11 +30,11 @@ export class UserApi extends BaseLoopBackApi {
   }
 
   /**
-   * Buscar un elemento relacionado por id para accessTokens.
+   * Find a related item by id for accessTokens.
    *
    * @param {any} id User id
    *
-   * @param {any} fk Clave foránea para accessTokens
+   * @param {any} fk Foreign key for accessTokens
    *
    * @returns {object} An empty reference that will be
    *   populated with the actual data once the response is returned
@@ -60,11 +60,11 @@ export class UserApi extends BaseLoopBackApi {
   }
 
   /**
-   * Suprimir un elemento relacionado por id para accessTokens.
+   * Delete a related item by id for accessTokens.
    *
    * @param {any} id User id
    *
-   * @param {any} fk Clave foránea para accessTokens
+   * @param {any} fk Foreign key for accessTokens
    *
    * @returns {object} An empty reference that will be
    *   populated with the actual data once the response is returned
@@ -87,11 +87,11 @@ export class UserApi extends BaseLoopBackApi {
   }
 
   /**
-   * Actualizar un elemento relacionado por id para accessTokens.
+   * Update a related item by id for accessTokens.
    *
    * @param {any} id User id
    *
-   * @param {any} fk Clave foránea para accessTokens
+   * @param {any} fk Foreign key for accessTokens
    *
    * @param {object} data Request data.
    *
@@ -123,7 +123,7 @@ export class UserApi extends BaseLoopBackApi {
   }
 
   /**
-   * accessTokens consultas de User.
+   * Queries accessTokens of User.
    *
    * @param {any} id User id
    *
@@ -153,7 +153,7 @@ export class UserApi extends BaseLoopBackApi {
   }
 
   /**
-   * Crea una nueva instancia en accessTokens de este modelo.
+   * Creates a new instance in accessTokens of this model.
    *
    * @param {any} id User id
    *
@@ -186,7 +186,7 @@ export class UserApi extends BaseLoopBackApi {
   }
 
   /**
-   * Suprime todos los accessTokens de este modelo.
+   * Deletes all accessTokens of this model.
    *
    * @param {any} id User id
    *
@@ -210,7 +210,7 @@ export class UserApi extends BaseLoopBackApi {
   }
 
   /**
-   * Recuentos accessTokens de User.
+   * Counts accessTokens of User.
    *
    * @param {any} id User id
    *
@@ -318,10 +318,10 @@ export class UserApi extends BaseLoopBackApi {
    *   populated with the actual data once the response is returned
    *   from the server.
    *
-   * El cuerpo de respuesta contiene propiedades de la AccessToken creada durante el inicio de la sesión.
-   * Dependiendo del valor del parámetro `include`, el cuerpo puede contener propiedades adicionales:
+   * The response body contains properties of the AccessToken created on login.
+   * Depending on the value of `include` parameter, the body may contain additional properties:
    * 
-   *   - `user` - `U+007BUserU+007D` - Datos del usuario conectado actualmente. (`include=user`)
+   *   - `user` - `U+007BUserU+007D` - Data of the currently logged in user. (`include=user`)
    * 
    *
    */
@@ -519,7 +519,7 @@ export class UserApi extends BaseLoopBackApi {
   }
 
   /**
-   * Crea una nueva instancia en accessTokens de este modelo.
+   * Creates a new instance in accessTokens of this model.
    *
    * @param {any} id User id
    *

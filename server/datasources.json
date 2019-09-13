@@ -1,7 +1,11 @@
 {
   "db": {
+    "host": "db",
+    "database": "example",
+    "username": "postgres",
+    "password": "postgres",
     "name": "db",
-    "connector": "memory"
+    "connector": "postgresql"
   }
 }
 

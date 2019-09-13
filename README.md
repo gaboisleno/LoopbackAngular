@@ -35,4 +35,11 @@ Create a .env File in project root
 	PUBLIC_URL=http://localhost:3000
 ```
 
+
+Run migrations
+
+`$ docker-compose exec server bash`
+
+`$ npm run migrate up`
+
 ###End

@@ -9,17 +9,17 @@ async function main() {
 
     // create reusable transporter object using the default SMTP transport
     const transporter = nodemailer.createTransport({
-        host: 'smtp.ethereal.email',
-        port: 587,
+        host: process.env.SMTP_HOST,
+        port: process.env.SMTP_PORT,
         auth: {
-            user: 'alvena.goldner73@ethereal.email',
-            pass: '4qVYsGRC2TpHKZ79ud'
+            user: process.env.SMTP_USER,
+            pass: process.env.SMTP_PASS
         }
     });
 
     // send mail with defined transport object
     let info = await transporter.sendMail({
-        from: 'alvena.goldner73@ethereal.email', // sender address
+        from: process.env.SMTP_USER, // sender address
         to: 'gisleno@codexia.io', // list of receivers
         subject: 'Hello ✔', // Subject line
         text: 'Hello world?', // plain text body

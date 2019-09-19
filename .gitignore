@@ -21,3 +21,4 @@ shared-db/
 client-dist/
 .env-secrets
 builds
+.env

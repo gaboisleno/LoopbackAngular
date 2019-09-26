@@ -16,10 +16,13 @@
   "dependencies": {
     "@mean-expert/loopback-component-realtime": "^1.0.2",
     "@mean-expert/loopback-sdk-builder": "^2.3.1",
+    "agenda": "^2.1.0",
+    "agendash": "^1.0.0",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "db-migrate": "^0.11.6",
     "helmet": "^3.10.0",
+    "logger": "0.0.1",
     "loopback": "^3.22.0",
     "loopback-boot": "^2.6.5",
     "loopback-component-explorer": "^6.2.0",

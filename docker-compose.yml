@@ -6,6 +6,7 @@ services:
     env_file: .env
     links:
       - db
+      - mongodb
     command: npm run watch
     volumes:
       - .:/usr/src/app
@@ -19,6 +20,12 @@ services:
       - db-data:/var/lib/postgresql/data
     ports:
       - "5432:5432"
+  
+  mongodb:
+    image: mongo:4.0.8
+    command: "--smallfiles --logpath=/dev/null"
+    ports:
+      - "27017:27017"
 
 volumes:
   db-data:

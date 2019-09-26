@@ -11,7 +11,9 @@
     "watch": "./node_modules/nodemon/bin/nodemon.js ./node_modules/ts-node/dist/bin.js -r tsconfig-paths/register server/server.js",
     "posttest": "npm run lint",
     "migrate": "node-pg-migrate",
-    "build:sdk": "./node_modules/.bin/lb-sdk server/server.js ./client-src/src/app/shared/sdk -w enabled -v disabled"
+    "build:sdk": "./node_modules/.bin/lb-sdk server/server.js ./client-src/src/app/shared/sdk -w enabled -v disabled",
+    "worker": "node worker.js",
+    "watch-worker": "./node_modules/nodemon/bin/nodemon.js worker.js"
   },
   "dependencies": {
     "@mean-expert/loopback-component-realtime": "^1.0.2",

@@ -27,6 +27,17 @@ services:
     ports:
       - "27017:27017"
 
+  worker:
+    build: .
+    env_file: .env
+    links:
+      - db
+      - mongodb
+    command: npm run watch-worker
+    volumes:
+      - .:/usr/src/app
+      - ./storage:/storage
+
 volumes:
   db-data:
     driver: local

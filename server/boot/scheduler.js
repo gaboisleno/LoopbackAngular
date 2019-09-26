@@ -19,13 +19,4 @@ module.exports = function(app) {
     });
 
     app.use('/agendash', Agendash(app.scheduler));
-
-    app.scheduler.define('hello', function(job) {
-        console.log("Hello every 10 seconds!");
-      });
-
-    app.scheduler.on('ready', () => {
-        console.log('Agenda is ready. Starting');
-        app.scheduler.start();
-    });
 };

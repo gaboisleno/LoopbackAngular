@@ -1,8 +1,5 @@
 import { Component } from '@angular/core';
-import { AppModule } from '../app.module';
 import { UserService } from '../services/user.service';
-import { HttpClientModule } from '@angular/common/http';
-
 
 @Component({
   templateUrl: './login.component.html',
@@ -19,8 +16,8 @@ export class LoginComponent {
   }
 
   clicked(){
-    this.userService.login(this.username, this.password).subscribe(response => {
-      console.log(response);
-    });
+    
+    this.userService.login(this.username, this.password);
+    
   }
 }

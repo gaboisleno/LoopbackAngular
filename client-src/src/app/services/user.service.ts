@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import {UserApi} from "../shared/sdk/services";
 import { share } from 'rxjs/operators';
+import { LoopBackAuth } from '../shared/sdk/services';
 
 @Injectable({
 	providedIn: UserApi,
@@ -9,17 +10,29 @@ import { share } from 'rxjs/operators';
 export class UserService {
 
   constructor(
-	private http: HttpClient, 
-	private userApi: UserApi) { }
+	private userApi: UserApi,
+	private authService:LoopBackAuth
+	){ 
 
-  	login(user, password){
-		  return this.userApi.login({username:user, password: password});
-  	}
-	  
-	  test() {
-  		return this.http.get('http://localhost:3000/api/clients').subscribe(data => {
-  			console.log(data);
-  		});
 	}
 
+  	login(user, password){
+		return this.userApi.login({username:user, password: password}).subscribe(
+		response => {
+			this.authService.setToken(response);
+			return true;
+		}, 
+		err => {
+			return false;
+		});
+	  }
+	  
+	logout(){
+		this.authService.clear();
+		this.userApi.logout();
+	}
+	
+	isLoggedIn() {
+		return !!(this.authService.getCurrentUserId() && this.authService.getAccessTokenId());
+	}
 }

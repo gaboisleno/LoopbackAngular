@@ -41,5 +41,10 @@ Run migrations
 
 `$ npm run migrate up`
 
-Docs:https://db-migrate.readthedocs.io/en/latest/
+Docs:
+
+https://db-migrate.readthedocs.io/en/latest/
+
+https://github.com/mean-expert-official/loopback-sdk-builder
+
 ###End

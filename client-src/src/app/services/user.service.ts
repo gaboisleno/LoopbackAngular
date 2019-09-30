@@ -17,14 +17,7 @@ export class UserService {
 	}
 
   	login(user, password){
-		return this.userApi.login({username:user, password: password}).subscribe(
-		response => {
-			this.authService.setToken(response);
-			return true;
-		}, 
-		err => {
-			return false;
-		});
+		return this.userApi.login({username:user, password: password});
 	  }
 	  
 	logout(){

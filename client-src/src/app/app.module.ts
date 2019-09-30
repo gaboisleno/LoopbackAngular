@@ -10,6 +10,7 @@ import { MaterialModule } from './material.module';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component'
 import { SDKBrowserModule } from './shared/sdk/index';
+import { AuthGuard } from './services/auth.guard.service';
 
 @NgModule({
   imports: [
@@ -26,7 +27,7 @@ import { SDKBrowserModule } from './shared/sdk/index';
     LoginComponent,
     RegisterComponent
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

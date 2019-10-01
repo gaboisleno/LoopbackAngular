@@ -10,6 +10,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SDKBrowserModule } from './shared/sdk/index';
 import { AuthGuard } from './services/auth.guard.service';
 //
+import { ToolbarComponent } from './toolbar/toolbar.component';
+//
 import { RegisterComponent } from './register/register.component'
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -29,7 +31,8 @@ import { HomeComponent } from './home/home.component';
     AppComponent,
     LoginComponent,
     RegisterComponent,
-    HomeComponent
+    HomeComponent,
+    ToolbarComponent
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

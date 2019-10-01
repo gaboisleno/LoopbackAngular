@@ -5,12 +5,13 @@ import { Router } from '@angular/router';
 
 
 @Component({
-  templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  selector:    'toolbar',
+  templateUrl: './toolbar.component.html',
+  styleUrls: ['./toolbar.component.css'],
   providers: [UserService]
 })
 
-export class HomeComponent {
+export class ToolbarComponent {
 
   constructor(
     private userService:UserService, 
@@ -19,7 +20,8 @@ export class HomeComponent {
     ){
   }
 
-  ngOnInit(){
-    
+  logout(){
+    this.userService.logout();
+    this.router.navigate(['/']);
   }
 }

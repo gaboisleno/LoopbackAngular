@@ -24,7 +24,6 @@ export class LoginComponent {
 
   ngOnInit(){
     if (this.authService.getCurrentUserId){
-      console.log(this.authService.getCurrentUserData);
       this.router.navigate(['/home']);
     }
   }
@@ -38,6 +37,5 @@ export class LoginComponent {
       err => {
         return false;
       });
-    
   }
 }

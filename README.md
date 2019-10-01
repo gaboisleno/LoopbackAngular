@@ -43,8 +43,10 @@ Run migrations
 
 Docs:
 
-https://db-migrate.readthedocs.io/en/latest/
+Migrate-db docs: https://db-migrate.readthedocs.io/en/latest/
 
-https://github.com/mean-expert-official/loopback-sdk-builder
+SDK for Loopback: https://github.com/mean-expert-official/loopback-sdk-builder
+
+Boostrap: https://bootswatch.com/darkly/
 
 ###End

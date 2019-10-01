@@ -1,0 +1,9 @@
+button, mat-form-field{
+    margin:5px;
+}
+
+body {
+    margin: 0;
+    font-family: monospace, sans-serif;
+  }
+  

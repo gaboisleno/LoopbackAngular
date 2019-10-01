@@ -6,11 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
-
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component'
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { SDKBrowserModule } from './shared/sdk/index';
 import { AuthGuard } from './services/auth.guard.service';
+//
+import { RegisterComponent } from './register/register.component'
+import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   imports: [
@@ -20,12 +22,14 @@ import { AuthGuard } from './services/auth.guard.service';
     HttpClientModule,
     MaterialModule,
     FormsModule,
+    FlexLayoutModule,
     SDKBrowserModule.forRoot()
   ],
   declarations: [
     AppComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    HomeComponent
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

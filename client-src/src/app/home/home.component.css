@@ -1,0 +1,16 @@
+button, mat-form-field{
+    margin:5px;
+}
+
+body {
+    margin: 0;
+    font-family: monospace, sans-serif;
+  }
+  
+  .example-icon {
+    padding: 0 14px;
+  }
+  
+  .example-spacer {
+    flex: 1 1 auto;
+  }

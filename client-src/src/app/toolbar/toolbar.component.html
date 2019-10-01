@@ -1,11 +1,29 @@
-<mat-toolbar fxLayout="row" fxLayoutAlign="end center">
-	<form>
-		<div>	
-			<button mat-stroked-button [matMenuTriggerFor]="menu">Menu</button>
-			<mat-menu #menu="matMenu">
-			  <button mat-menu-item>Opciones</button>
-			  <button mat-menu-item (click)="logout()">Cerrar sesion</button>
-			</mat-menu>			
-		</div>
-	</form>
-</mat-toolbar>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">Varda</a>
+	
+	<div class="collapse navbar-collapse" id="navbarColor01">
+		<ul class="navbar-nav mr-auto">
+			<li class="nav-item active"></li>
+		</ul>
+		<form class="form-inline my-2 my-lg-0">
+			<div>	
+				<div class="btn-group" role="group" aria-label="Button group with nested dropdown">
+						<button type="button" class="btn btn-primary">Menu</button>
+						<div class="btn-group" role="group">
+						  <button [matMenuTriggerFor]="menu" id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
+					</div>
+				</div>
+
+				<mat-menu #menu="matMenu">
+					<button mat-menu-item>Opciones</button>
+					<button mat-menu-item (click)="logout()">Cerrar sesion</button>
+				</mat-menu>			
+			</div>
+		</form>
+	</div>
+</nav>
+
+
+	
+	
+	

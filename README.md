@@ -47,6 +47,6 @@ Migrate-db docs: https://db-migrate.readthedocs.io/en/latest/
 
 SDK for Loopback: https://github.com/mean-expert-official/loopback-sdk-builder
 
-Boostrap: https://bootswatch.com/darkly/
+Boostrap: https://bootswatch.com/flatly/
 
 ###End

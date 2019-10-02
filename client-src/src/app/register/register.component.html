@@ -1,6 +1,6 @@
-<mat-toolbar fxLayout="row" fxLayoutAlign="end center">
+<mat-toolbar fxLayout="row" fxLayoutAlign="start center">
 	<div>
-		<button type="button" class="btn btn-primary" routerLink="/">Back</button>
+		<button type="button" class="btn btn-primary" routerLink="/">BACK</button>
 	</div>
 </mat-toolbar>
 
@@ -8,7 +8,7 @@
 <form fxLayout="column" fxLayoutAlign="center center">
 		<div>
 		  <mat-form-field>
-			<input matInput placeholder="Usuario" name="username" [(ngModel)]="username"/>
+			<input matInput placeholder="Username" name="username" [(ngModel)]="username"/>
 		  </mat-form-field>
 		</div>
 		<div>
@@ -18,19 +18,19 @@
 		</div>
 		<div>
 		  <mat-form-field>
-			<input matInput placeholder="Contraseña" type="password" name="password" [(ngModel)]="password"/>
+			<input matInput placeholder="Password" type="password" name="password" [(ngModel)]="password"/>
 		  </mat-form-field>
 		  <div>
 		  <mat-form-field>
-			<input matInput placeholder="Confirmar contraseña" type="password" name="confirmPassword" [(ngModel)]="confirmPassword"/>
+			<input matInput placeholder="Confirm password" type="password" name="confirmPassword" [(ngModel)]="confirmPassword"/>
 		  </mat-form-field>
 		</div>
 		</div>
 		<div>
-			<button mat-stroked-button color="primary" (click)="click()">Registrarse</button>
+			<button mat-stroked-button color="primary" (click)="click()">SIGN UP</button>
 		</div>
 		<div>
-			<mat-checkbox color="primary">Recibir spam</mat-checkbox>
+			<mat-checkbox color="primary">Receive spam</mat-checkbox>
 		</div>
 	</form>
 </div>

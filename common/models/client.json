@@ -15,5 +15,24 @@
   "validations": [],
   "relations": {},
   "acls": [],
-  "methods": {}
+  "methods": {
+    "sendMail": {
+      "accepts": [
+          {
+              "arg": "data",
+              "type": "object",
+              "http": { "source": "body" }
+          }
+      ],
+      "returns": [
+          {
+              "arg": "status",
+              "type": "object",
+              "root": true,
+              "description": "Status"
+          }
+      ],
+      "http": { "verb": "post", "path": "/sendMail" }
+    }
+  }
 }

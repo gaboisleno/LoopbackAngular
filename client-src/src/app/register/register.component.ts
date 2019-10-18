@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 })
 export class RegisterComponent implements OnInit {
   username:         string;
-  email:            string;
+  email:            string = ' ';
   password:         string;
   confirmPassword:  string;
 
@@ -29,6 +29,13 @@ export class RegisterComponent implements OnInit {
     .subscribe( () => {
       this.router.navigate(['/']);
     });
+    
   }
+
+  emailClass(email){
+    var re = /\S+@\S+\.\S+/;
+    return (re.test(email)) ? 'form-control' : 'form-control is-invalid';
+  }
+
 
 }

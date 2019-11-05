@@ -3,12 +3,12 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SDKBrowserModule } from './shared/sdk/index';
 import { AuthGuard } from './services/auth.guard.service';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
 import { ToolbarComponent } from './toolbar/toolbar.component';
 //
@@ -24,6 +24,7 @@ import { HomeComponent } from './home/home.component';
     HttpClientModule,
     MaterialModule,
     FormsModule,
+    ReactiveFormsModule,
     FlexLayoutModule,
     SDKBrowserModule.forRoot()
   ],

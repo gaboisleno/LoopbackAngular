@@ -1,7 +1,7 @@
 'use strict';
 const Agendash = require('agendash');
 const Agenda = require('agenda');
-const logger = require('logger');
+const logger = require('../../lib/logger');
 
 module.exports = function(app) {
 
@@ -10,7 +10,7 @@ module.exports = function(app) {
         return;
     }
 
-    console.log('Loading scheduler');
+    logger.debug('Loading scheduler');
 
     app.scheduler = new Agenda({
         db: {

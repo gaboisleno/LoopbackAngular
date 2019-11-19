@@ -1,9 +1,9 @@
 exports.shorthands = undefined;
 
-exports.up = (pgm) => {
-
+exports.up = async function(pgm) {
+    
 };
 
-exports.down = (pgm) => {
+exports.down = async function(db) {
 
 };

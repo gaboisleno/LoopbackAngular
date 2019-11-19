@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, ErrorHandler, Injectable } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -15,6 +15,21 @@ import { ToolbarComponent } from './toolbar/toolbar.component';
 import { RegisterComponent } from './register/register.component'
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
+
+
+import * as Sentry from "@sentry/browser";
+Sentry.init({
+  dsn: "https://b1ab4e7be56a433eada97c0dc58ae670@sentry.io/1826472"
+});
+
+@Injectable()
+export class SentryErrorHandler implements ErrorHandler {
+  constructor() {}
+  handleError(error) {
+    const eventId = Sentry.captureException(error.originalError || error);
+    Sentry.showReportDialog({ eventId });
+  }
+}
 
 @NgModule({
   imports: [
@@ -35,7 +50,10 @@ import { HomeComponent } from './home/home.component';
     HomeComponent,
     ToolbarComponent
   ],
-  providers: [AuthGuard],
+  providers: [
+    AuthGuard, 
+    { provide: ErrorHandler, useClass: SentryErrorHandler }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

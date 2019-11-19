@@ -3,7 +3,6 @@ import { UserService } from '../services/user.service';
 import { LoopBackAuth } from '../shared/sdk/services';
 import { Router } from '@angular/router';
 
-
 @Component({
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],

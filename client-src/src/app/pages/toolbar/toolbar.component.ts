@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { UserService } from '../services/user.service';
-import { LoopBackAuth } from '../shared/sdk/services';
+import { UserService } from '../../services/user.service';
+import { LoopBackAuth } from '../../shared/sdk/services';
 import { Router } from '@angular/router';
 
 

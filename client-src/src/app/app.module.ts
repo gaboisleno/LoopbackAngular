@@ -10,11 +10,11 @@ import { SDKBrowserModule } from './shared/sdk/index';
 import { AuthGuard } from './services/auth.guard.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
-import { ToolbarComponent } from './toolbar/toolbar.component';
+import { ToolbarComponent } from './pages/toolbar/toolbar.component';
 //
-import { RegisterComponent } from './register/register.component'
-import { LoginComponent } from './login/login.component';
-import { HomeComponent } from './home/home.component';
+import { RegisterComponent } from './pages/register/register.component'
+import { LoginComponent } from './pages/login/login.component';
+import { HomeComponent } from './pages/home/home.component';
 
 
 import * as Sentry from "@sentry/browser";

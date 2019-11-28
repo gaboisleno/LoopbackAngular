@@ -26,8 +26,14 @@
 				<button type="button" class="btn btn-primary">Menu</button>
 				<button [matMenuTriggerFor]="menu" id="btnGroupDrop1" type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></button>
 				<mat-menu #menu="matMenu">
-					<button mat-menu-item>User Settings</button>
-					<button mat-menu-item (click)="logout()">Log Out</button>
+					<button mat-menu-item>
+						<mat-icon>settings</mat-icon>
+						User Settings
+					</button>
+					<button mat-menu-item (click)="logout()">
+						<mat-icon>exit_to_app</mat-icon>
+						Log Out
+					</button>
 				</mat-menu>			
 			</div>
 

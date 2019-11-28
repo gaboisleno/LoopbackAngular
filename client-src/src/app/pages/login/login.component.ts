@@ -1,41 +1,12 @@
-import { Component } from '@angular/core';
-import { UserService } from '../../services/user.service';
-import { LoopBackAuth } from '../../shared/sdk/services';
-import { Router } from '@angular/router';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css'],
-  providers: [UserService]
+    selector: 'login-cmp',
+    moduleId: module.id,
+    templateUrl: 'login.component.html'
 })
 
-export class LoginComponent {
-  title = 'client-src';
-  username: string;
-  password: string;
-
-  constructor(
-    private userService:UserService, 
-    private authService:LoopBackAuth,
-    private router:Router
-    ){
-  }
-
-  ngOnInit(){
-    if (this.authService.getCurrentUserId){
-      this.router.navigate(['/home']);
+export class LoginComponent implements OnInit{
+    ngOnInit(){
     }
-  }
-
-  clicked(){
-    this.userService.login(this.username, this.password).subscribe(
-      response => {
-        this.authService.setToken(response);
-        this.router.navigate(['/home']);
-      }, 
-      err => {
-        return false;
-      });
-  }
 }

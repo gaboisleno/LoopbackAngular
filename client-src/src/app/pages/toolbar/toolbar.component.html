@@ -7,19 +7,25 @@
 		<div class="collapse navbar-collapse" id="navbarColor01">
 		  <ul class="navbar-nav mr-auto">
 			<li class="nav-item active">
-			  <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+			  <a class="nav-link" href="#">News<span class="sr-only">(current)</span></a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Features</a>
+			  <a class="nav-link" href="#">Popular</a>
 			</li>
 			<li class="nav-item">
-			  <a class="nav-link" href="#">Pricing</a>
+			  <a class="nav-link" href="#">Messages</a>
 			</li>
 			<li class="nav-item">
 			  <a class="nav-link" href="#">About</a>
-			</li>
-		  </ul>
-		  
+			</li>  
+    </ul>
+    
+    <form class="form-inline">
+      <input class="form-control mr-sm-2" type="text" placeholder="Search">
+      <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+      <p>&nbsp;</p>
+    </form>
+    
 		  <form class="form-inline my-2 my-lg-0">
 			
 			  <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
@@ -28,7 +34,7 @@
 				<mat-menu #menu="matMenu">
 					<button mat-menu-item>
 						<mat-icon>settings</mat-icon>
-						User Settings
+						My profile
 					</button>
 					<button mat-menu-item (click)="logout()">
 						<mat-icon>exit_to_app</mat-icon>

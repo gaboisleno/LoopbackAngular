@@ -8,6 +8,8 @@ import { MaterialModule } from './material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SDKBrowserModule } from './shared/sdk/index';
 import { AuthGuard } from './services/auth.guard.service';
+import { UserService } from './services/user.service';
+
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
 import { ToolbarComponent } from './pages/toolbar/toolbar.component';
@@ -16,7 +18,7 @@ import { RegisterComponent } from './pages/register/register.component'
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 
-
+/*
 import * as Sentry from "@sentry/browser";
 Sentry.init({
   dsn: "https://b1ab4e7be56a433eada97c0dc58ae670@sentry.io/1826472"
@@ -26,10 +28,11 @@ Sentry.init({
 export class SentryErrorHandler implements ErrorHandler {
   constructor() {}
   handleError(error) {
-    const eventId = Sentry.captureException(error.originalError || error);
-    Sentry.showReportDialog({ eventId });
+    // const eventId = Sentry.captureException(error.originalError || error);
+    // Sentry.showReportDialog({ eventId });
   }
 }
+ */
 
 @NgModule({
   imports: [
@@ -51,8 +54,9 @@ export class SentryErrorHandler implements ErrorHandler {
     ToolbarComponent
   ],
   providers: [
-    AuthGuard, 
-    { provide: ErrorHandler, useClass: SentryErrorHandler }
+    AuthGuard,
+    UserService
+    //{ provide: ErrorHandler, useClass: SentryErrorHandler }
   ],
   bootstrap: [AppComponent]
 })

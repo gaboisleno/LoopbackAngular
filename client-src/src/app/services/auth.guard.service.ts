@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { CanActivate } from '@angular/router';
 import { LoopBackAuth } from '../shared/sdk/services';
 
+let moment = require('moment');
+
 @Injectable()
 export class AuthGuard implements CanActivate {
 
@@ -10,9 +12,9 @@ export class AuthGuard implements CanActivate {
 
     canActivate() {
         // If the user is not logged in we'll send them back to the home page
-
-        if (!this.authService.getToken().id) {
-            console.log('No estás logueado');
+        let token = this.authService.getToken();
+        if (!token.id || moment(token.created).diff(moment(), 'days') < -3) {
+            console.log('No estás logueado o token vencido');
             this.router.navigate(['/']);
             return false;
         }

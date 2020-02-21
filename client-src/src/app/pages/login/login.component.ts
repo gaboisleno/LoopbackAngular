@@ -27,7 +27,7 @@ export class LoginComponent {
     }
   }
 
-  clicked(){
+  login(){
     this.userService.login(this.username, this.password).subscribe(
       response => {
         this.authService.setToken(response);
@@ -36,5 +36,11 @@ export class LoginComponent {
       err => {
         return false;
       });
+  }
+
+  keyDownFunction(event) {
+    if(event.keyCode == 13) {
+      this.login();
+    }
   }
 }

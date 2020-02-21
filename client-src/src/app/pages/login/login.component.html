@@ -6,10 +6,10 @@
 		<li class="nav-item active">
 		</li>
 		</ul>
-		<form class="form-inline my-2 my-lg-0">
+		<form class="form-inline my-2 my-lg-0" (keydown)="keyDownFunction($event)">
 			<input [(ngModel)]="username" name="username" class="form-control mr-sm-2" type="text" placeholder="User" >
 			<input [(ngModel)]="password" name="password" class="form-control mr-sm-2" type="password" placeholder="Pass" >
-			<button type="button" class="btn btn-outline-primary" (click)="clicked()">LOG IN</button>
+			<button type="button" class="btn btn-outline-primary" (click)="login()">LOG IN</button>
 			<button type="button" class="btn btn-primary" routerLink="/register">SIGN UP</button>
 		</form>
 	</div>

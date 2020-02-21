@@ -34,6 +34,7 @@
     "nodemailer": "^6.3.0",
     "pg": "^7.11.0",
     "serve-favicon": "^2.0.1",
+    "socket.io": "^2.3.0",
     "strong-error-handler": "^3.0.0"
   },
   "devDependencies": {

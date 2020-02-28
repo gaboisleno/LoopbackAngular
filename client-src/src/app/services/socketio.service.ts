@@ -7,11 +7,9 @@ export class SocketIOService {
 	
 	constructor(){
 		this.socket = io.connect('localhost:3000');
-		console.log(this.socket);	
 	}
 
 	sendMessage(){
 		this.socket.emit('message', 'Client message');
-		console.log('message to backend');
 	}
 } 

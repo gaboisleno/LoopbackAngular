@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { LoopBackAuth } from '../../shared/sdk/services';
 import { Router } from '@angular/router';
-import io from 'socket.io-client';
 import { SocketIOService } from '../../services/socketio.service';
 
 
@@ -24,6 +23,9 @@ export class HomeComponent implements OnInit{
   }
 
   ngOnInit(){
+  }
+
+  send(){
     this.socketio.sendMessage();
   }
 }

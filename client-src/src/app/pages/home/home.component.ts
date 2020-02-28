@@ -1,7 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UserService } from '../../services/user.service';
 import { LoopBackAuth } from '../../shared/sdk/services';
 import { Router } from '@angular/router';
+import io from 'socket.io-client';
+import { SocketIOService } from '../../services/socketio.service';
+
 
 @Component({
   templateUrl: './home.component.html',
@@ -9,16 +12,18 @@ import { Router } from '@angular/router';
   providers: [UserService]
 })
 
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
   constructor(
-    private userService:UserService, 
-    private authService:LoopBackAuth,
-    private router:Router
-    ){
+    private userService: UserService, 
+    private authService: LoopBackAuth,
+    private router: Router,
+    private socketio: SocketIOService
+  ){
+    
   }
 
   ngOnInit(){
-    
+    this.socketio.sendMessage();
   }
 }

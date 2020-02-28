@@ -9,6 +9,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { SDKBrowserModule } from './shared/sdk/index';
 import { AuthGuard } from './services/auth.guard.service';
 import { UserService } from './services/user.service';
+import { SocketIOService } from './services/socketio.service';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 //
@@ -55,7 +56,8 @@ export class SentryErrorHandler implements ErrorHandler {
   ],
   providers: [
     AuthGuard,
-    UserService
+    UserService,
+    SocketIOService
     //{ provide: ErrorHandler, useClass: SentryErrorHandler }
   ],
   bootstrap: [AppComponent]

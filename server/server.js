@@ -2,8 +2,8 @@
 
 var loopback = require('loopback');
 var boot = require('loopback-boot');
-
 var app = module.exports = loopback();
+const logger = require('../lib/logger');
 
 app.start = function() {
   // start the web server
@@ -18,6 +18,10 @@ app.start = function() {
   });
 };
 
+
+
+
+
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
@@ -25,5 +29,21 @@ boot(app, __dirname, function(err) {
 
   // start the server if `$ node server.js`
   if (require.main === module)
-    app.start();
+    //app.start();
+    //Socket.IO
+    app.io = require('socket.io')(app.start());
+    
+    logger.debug("Server socket ON")
+    
+    app.io.on('connection', function(socket){
+      console.log('Socket client connected');
+      
+      socket.on('message', function(msg){
+        console.log(msg);
+      })
+      
+      socket.on('disconnect', function(){
+          console.log('Socket Client disconnected');
+      });
+    });
 });
